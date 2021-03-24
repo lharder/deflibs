@@ -18,8 +18,8 @@ function string.split( self, delim )
 		if delimStart == nil then 
 			if wordStart <= #self then 
 				table.insert( t, self:sub( wordStart ))
-				break
 			end 
+			break
 		end
 		table.insert( t, self:sub( wordStart, delimStart - 1 ) )
 		wordStart = delimEnd + 1
