@@ -5,4 +5,5 @@ require( "deflibs.defold" )
 
 function init(self)
 	pprint( ( "Hello, you!" ):split( "," ) )
+	pprint( ( "Hello.you.are.special!" ):split( "." ) )
 end

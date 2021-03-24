@@ -14,7 +14,7 @@ function string.split( self, delim )
 	local wordStart = 1
 	local delimStart, delimEnd 
 	while true  do
-		delimStart, delimEnd = self:find( delim, wordStart )
+		delimStart, delimEnd = self:find( delim, wordStart, true )
 		if delimStart == nil then 
 			if wordStart <= #self then 
 				table.insert( t, self:sub( wordStart ))
