@@ -1,0 +1,8 @@
+local lua = require( "deflibs.lualib")
+require( "deflibs.defold" )
+
+
+
+function init(self)
+	pprint( ( "Hello, you!" ):split( "," ) )
+end
