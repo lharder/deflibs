@@ -75,7 +75,7 @@ function goRotateBy( degrees, id, dt )
 	if dt == nil then dt = 0.05 end
 	
 	local rot = go.get_rotation( id )
-	go.set_rotation( rot * vmath.quat_rotation_z( dt ), id )
+	go.set_rotation( rot * vmath.quat_rotation_z( degrees * dt ), id )
 end
 
 
