@@ -19,7 +19,11 @@ function OrderedMap:put( key, value )
 end	
 
 function OrderedMap:get( key )
-	return self.keyValues[ key ]
+	if tonumber( key ) ~= nil then 
+		return self.keyValues[ self.orderedKeys[ key ] ]
+	else 
+		return self.keyValues[ key ]
+	end
 end
 
 function OrderedMap:has( key )
