@@ -51,6 +51,18 @@ function OrderedMap:contains( value )
 	return res, k
 end
 
+function OrderedMap:foreach( fn )
+	if fn == nil then return end
+	local result = nil
+	for _, key in ipairs( self:keys() ) do
+		result = fn( key, self:get( key ) )
+		-- Beware, arbitray definition to interrupt prematurely:
+		-- If a result is returned from any iteration,
+		-- break off iteration and return the value to the caller
+		if result ~= nil then return result end
+	end
+end
+
 
 return OrderedMap
 
